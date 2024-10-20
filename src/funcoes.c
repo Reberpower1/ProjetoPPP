@@ -10,14 +10,15 @@
 int menu(){
     int menu = 0;
     char line[BUF];
+    asciiArt();
     printf("***********MENU***********\n");
-    printf("1. Inserir novo doente\n");
-    printf("2. Eliminar doente existente\n");
-    printf("3. Lista de doentes por ordem alfabética\n");
-    printf("4. Lista de doentes com tensão máxima acima de um determinado valor\n");
-    printf("5. Informação sobre um determinado doente\n");
-    printf("6. Registar novas informações de um determinado doente num determinado dia\n");
-    printf("7. Terminar\n");
+    printf("[1] Inserir novo doente\n");
+    printf("[2] Eliminar doente existente\n");
+    printf("[3] Lista de doentes por ordem alfabética\n");
+    printf("[4] Lista de doentes com tensão máxima acima de um determinado valor\n");
+    printf("[5] Informação sobre um determinado doente\n");
+    printf("[6] Registar novas informações de um determinado doente num determinado dia\n");
+    printf("[7] Terminar\n");
     do {
         printf("Opção: ");
         if (fgets(line, sizeof(line), stdin)) {
@@ -436,4 +437,28 @@ int maior_ID(Doente* head){
         temp = temp->prox;
     }
     return maior_id + 1;
+}
+
+void asciiArt(){
+    printf("\n"
+    "                                                                                \n"
+    "              _____                    _____                    _____           \n"
+    "             /\\    \\                  /\\    \\                  /\\    \\          \n"
+    "            /::\\    \\                /::\\    \\                /::\\    \\         \n"
+    "           /::::\\    \\              /::::\\    \\              /::::\\    \\        \n"
+    "          /::::::\\    \\            /::::::\\    \\            /::::::\\    \\       \n"
+    "         /:::/\\:::\\    \\          /:::/\\:::\\    \\          /:::/\\:::\\    \\      \n"
+    "        /:::/__\\:::\\    \\        /:::/__\\:::\\    \\        /:::/__\\:::\\    \\     \n"
+    "       /::::\\   \\:::\\    \\      /::::\\   \\:::\\    \\      /::::\\   \\:::\\    \\    \n"
+    "      /::::::\\   \\:::\\    \\    /::::::\\   \\:::\\    \\    /::::::\\   \\:::\\    \\   \n"
+    "     /:::/\\:::\\   \\:::\\____\\  /:::/\\:::\\   \\:::\\____\\  /:::/\\:::\\   \\:::\\____\\  \n"
+    "    /:::/  \\:::\\   \\:::|    |/:::/  \\:::\\   \\:::|    |/:::/  \\:::\\   \\:::|    | \n"
+    "    \\::/    \\:::\\  /:::|____|\\::/    \\:::\\  /:::|____|\\::/    \\:::\\  /:::|____| \n"
+    "     \\/_____\\/:::\\/:::/    /  \\/_____\\/:::\\/:::/    /  \\/_____\\/:::\\/:::/    /  \n"
+    "              \\::::::/    /            \\::::::/    /            \\::::::/    /   \n"
+    "               \\::::/    /              \\::::/    /              \\::::/    /    \n"
+    "                \\::/____/                \\::/____/                \\::/____/     \n"
+    "                 ~~                       ~~                       ~~           \n"
+    "                                                                                \n");
+    printf("Bem-vindo Doutor!\n");
 }
